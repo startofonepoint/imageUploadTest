@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5772ADA11C97ACFD0090155E /* NSMutableData-appendString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772ADA01C97ACFD0090155E /* NSMutableData-appendString.swift */; };
 		57E4A2A11C8D1E08002856D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4A2A01C8D1E08002856D1 /* AppDelegate.swift */; };
 		57E4A2A31C8D1E08002856D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4A2A21C8D1E08002856D1 /* ViewController.swift */; };
 		57E4A2A61C8D1E08002856D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E4A2A41C8D1E08002856D1 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5772ADA01C97ACFD0090155E /* NSMutableData-appendString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableData-appendString.swift"; sourceTree = "<group>"; };
 		57E4A29D1C8D1E07002856D1 /* ImageUploadTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageUploadTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E4A2A01C8D1E08002856D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E4A2A21C8D1E08002856D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				57E4A2A71C8D1E08002856D1 /* Assets.xcassets */,
 				57E4A2A91C8D1E08002856D1 /* LaunchScreen.storyboard */,
 				57E4A2AC1C8D1E08002856D1 /* Info.plist */,
+				5772ADA01C97ACFD0090155E /* NSMutableData-appendString.swift */,
 			);
 			path = ImageUploadTest;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					57E4A29C1C8D1E07002856D1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = MSR962JFFX;
 					};
 					57E4A2B01C8D1E08002856D1 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -257,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E4A2A31C8D1E08002856D1 /* ViewController.swift in Sources */,
+				5772ADA11C97ACFD0090155E /* NSMutableData-appendString.swift in Sources */,
 				57E4A2A11C8D1E08002856D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ImageUploadTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.startofonepoint.ImageUploadTest;
@@ -408,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ImageUploadTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.startofonepoint.ImageUploadTest;
@@ -482,6 +489,7 @@
 				57E4A2C71C8D1E08002856D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57E4A2C81C8D1E08002856D1 /* Build configuration list for PBXNativeTarget "ImageUploadTestTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +498,7 @@
 				57E4A2CA1C8D1E08002856D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57E4A2CB1C8D1E08002856D1 /* Build configuration list for PBXNativeTarget "ImageUploadTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +507,7 @@
 				57E4A2CD1C8D1E08002856D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
