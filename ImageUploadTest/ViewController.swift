@@ -56,8 +56,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func uploadImage(image:UIImage) {
         //let configulation = NSURLSessionConfiguration.defaultSessionConfiguration()
-        var request = NSMutableURLRequest(URL: NSURL(string: "http://172.30.1.16:3000/upload")!)
-        let session = NSURLSession.sharedSession()
+        var request = NSMutableURLRequest(URL: NSURL(string: "http://172.30.1.8:3000/upload")!)
+        var session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: self, delegateQueue: NSOperationQueue.mainQueue())
+        
+        // dataTaskWithRequest를 이용한 로직. 이로직을 사용하면 정상적으로 업로드 된다. 
+
         let boundary = NSUUID().UUIDString
         
         request.HTTPMethod = "POST"
@@ -80,7 +83,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let task = session.dataTaskWithRequest(request)
             task.resume()
         }
+ /*
+        //uploadTaskWithRequest를 이용한로직. file에서 직접 올리는 방법이 아닌 이미지 화일로 업로드를 시도해본다.
+        //image를 NSData로 변환한다.
+        let boundary = NSUUID().UUIDString
+        request.HTTPMethod = "POST"
+        let imageData:NSData = UIImageJPEGRepresentation(image, 1.0)!
+        let bodyData = createBodyWithParameters("userPhoto", imageDataKey: imageData, boundary: boundary)
+        let task = session.uploadTaskWithRequest(request, fromData: bodyData)
+        task.resume();
+ */
     }
+    
     
     func createBodyWithParameters(filePathKey: String?, imageDataKey:NSData, boundary:String)->NSData
     {
@@ -98,7 +112,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         body.appendString("--\(boundary)--\r\n")
         
-        print(body.description)
         return body
     }
     
